@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559796748994.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "731527380",
+    "id" : "8CE0FB59",
+    "lastKnownWriteTime" : 1562353384,
+    "last_content_update" : 1562353384307,
+    "path" : "~/Dropbox/projects/r_projects/Packages/AlphaVantageQuery/R/alpha_vant.R",
+    "project_path" : "R/alpha_vant.R",
+    "properties" : {
+        "cursorPosition" : "47,22",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

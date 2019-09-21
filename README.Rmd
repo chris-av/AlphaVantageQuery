@@ -1,0 +1,62 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# AlphaVantageQuery
+
+The goal of AlphaVantageQuery is to query the API from Alpha Vantage (which you can find at: https://www.alphavantage.co/) for easy access to data. All you would need is a ticker symbol and an API key for more granular level data.
+
+
+
+## Installation
+
+You can install the released version of AlphaVantageQuery from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("AlphaVantageQuery")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r alpha_vant}
+library(AlphaVantageQuery)
+
+
+alpha_vant("GOOGL", frequency = "daily")      # this only returns a data frame
+
+matrix1 = matrix(
+    c(
+      rep(1,3),
+      rep(1,3),
+      rep(1,3),
+      rep(2,3),
+      rep(2,3)
+    ), 
+    nrow = 5, ncol = 3, byrow = TRUE
+  )
+  with(subset(GOOGL_DAILY, GOOGL_DAILY$date > as.Date("2010-01-01")),
+       {
+         layout(matrix1)
+         plot(date, open, type = "l", main = "GOOGL")
+         lines(date, high, col = "blue", lwd = 0.3)
+         lines(date, low, col = "blue", lwd = 0.3)
+         
+         plot(date, volume, type = "l", main = "GOOGL", col = "#108a4c")
+       }
+  )
+```
+
+
+Note that the function only returned the data frame. 
